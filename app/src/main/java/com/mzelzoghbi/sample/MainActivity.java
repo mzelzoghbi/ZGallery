@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public void gridActivity(View v) {
         ZGrid.with(this, getDummyImageList())
                 .setToolbarColorResId(R.color.colorAccent)
-                .setTitle("bastawesy")
+                .setTitle("Zak Gallery")
                 .setSpanCount(3)
                 .setGridImgPlaceHolder(R.color.colorPrimary)
                 .show();
