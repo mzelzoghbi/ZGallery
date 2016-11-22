@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTitle("Zak Gallery")
                 .setToolbarTitleColor(ZColor.WHITE)
                 .setSpanCount(3)
-                .setGridImgPlaceHolder(R.color.colorPrimary)
+                .setGridgit addd ImgPlaceHolder(R.color.colorPrimary)
                 .show();
     }
 
