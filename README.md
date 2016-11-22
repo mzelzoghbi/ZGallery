@@ -8,8 +8,11 @@ It includes two activities :
 * For displaying images in a `ViewPager` with a nice scroll `HorizontalList` and nice zooming gestures **Thanks for [PhotoView Library](https://github.com/chrisbanes/PhotoView)** 
 
 ## Screenshots
+<a href="https://youtu.be/eJ70DDmr2FE"><img src="https://github.com/mzelzoghbi/ZGallery/blob/master/ZGallery_lib_sample_preview.gif" alt="" width="200px"></a>
 <a href="https://github.com/mzelzoghbi/ZGallery/blob/master/screenshot_grid.png"><img src="https://github.com/mzelzoghbi/ZGallery/blob/master/screenshot_grid.png" alt="" width="200px"></a>
 <a href="https://github.com/mzelzoghbi/ZGallery/blob/master/screenshot_gallery.png"><img src="https://github.com/mzelzoghbi/ZGallery/blob/master/screenshot_gallery.png" alt="" width="200px"></a>
+
+
 
 ## How it works
 ### Grid List Builder
