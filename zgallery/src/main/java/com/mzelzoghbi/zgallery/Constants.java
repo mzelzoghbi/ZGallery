@@ -11,5 +11,8 @@ public final class Constants {
         public static final String TOOLBAR_COLOR_ID = "toolbarColorId";
         public static final String TITLE = "title";
         public static final String IMG_PLACEHOLDER = "placeholder";
+        public static final String TOOLBAR_TITLE_COLOR = "toolbarTitleColor";
+        public static final String SELECTED_IMG_POS = "selectedImgPos";
+        public static final String BG_COLOR = "bgColor";
     }
 }

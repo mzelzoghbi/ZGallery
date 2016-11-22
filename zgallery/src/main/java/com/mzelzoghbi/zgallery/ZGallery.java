@@ -3,15 +3,15 @@ package com.mzelzoghbi.zgallery;
 import android.app.Activity;
 import android.content.Intent;
 
-import com.mzelzoghbi.zgallery.activities.ZGridActivity;
+import com.mzelzoghbi.zgallery.activities.ZGalleryActivity;
 import com.mzelzoghbi.zgallery.entities.ZColor;
 
 import java.util.ArrayList;
 
 /**
- * Created by mohamedzakaria on 8/7/16.
+ * Created by mohamedzakaria on 8/11/16.
  */
-public class ZGrid {
+public class ZGallery {
     private Activity mActivity;
     private ArrayList<String> imagesURLs;
     private String title;
@@ -19,20 +19,22 @@ public class ZGrid {
     private int toolbarColor = -1;
     private int imgPlaceHolderResId = -1;
     private ZColor color;
+    private int selectedImgPosition;
+    private ZColor backgroundColor;
 
-    private ZGrid() {
+    private ZGallery() {
     }
 
     /**
      * @param activity   Refrence from current activity
      * @param imagesURLs Image URLs to be displayed
      */
-    public static ZGrid with(Activity activity, ArrayList<String> imagesURLs) {
-        return new ZGrid(activity, imagesURLs);
+    public static ZGallery with(Activity activity, ArrayList<String> imagesURLs) {
+        return new ZGallery(activity, imagesURLs);
     }
 
 
-    private ZGrid(Activity activity, ArrayList<String> imagesURLs) {
+    private ZGallery(Activity activity, ArrayList<String> imagesURLs) {
         this.imagesURLs = imagesURLs;
         this.mActivity = activity;
     }
@@ -43,19 +45,8 @@ public class ZGrid {
      * @param title
      * @return
      */
-    public ZGrid setTitle(String title) {
+    public ZGallery setTitle(String title) {
         this.title = title;
-        return this;
-    }
-
-    /**
-     * Set grid layout colums count (default: 2)
-     *
-     * @param count integer number for colum count
-     * @return
-     */
-    public ZGrid setSpanCount(int count) {
-        this.spanCount = count;
         return this;
     }
 
@@ -65,18 +56,8 @@ public class ZGrid {
      * @param colorResId
      * @return
      */
-    public ZGrid setToolbarColorResId(int colorResId) {
+    public ZGallery setToolbarColorResId(int colorResId) {
         this.toolbarColor = colorResId;
-        return this;
-    }
-
-    /**
-     * Set placeholder image for images in the grid
-     * @param imgPlaceHolderResId
-     * @return
-     */
-    public ZGrid setGridImgPlaceHolder(int imgPlaceHolderResId) {
-        this.imgPlaceHolderResId = imgPlaceHolderResId;
         return this;
     }
 
@@ -86,21 +67,38 @@ public class ZGrid {
      * @param color enum color may be black or white
      * @return
      */
-    public ZGrid setToolbarTitleColor(ZColor color) {
+    public ZGallery setToolbarTitleColor(ZColor color) {
         this.color = color;
         return this;
     }
+
     /**
-     * Start the grid activity with builder settings
+     * Setting starting position
+     *
+     * @param selectedImgPosition
+     * @return
+     */
+    public ZGallery setSelectedImgPosition(int selectedImgPosition) {
+        this.selectedImgPosition = selectedImgPosition;
+        return this;
+    }
+
+    public ZGallery setGalleryBackgroundColor(ZColor backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+
+    /**
+     * Start the gallery activity with builder settings
      */
     public void show() {
-        Intent gridActivity = new Intent(mActivity, ZGridActivity.class);
+        Intent gridActivity = new Intent(mActivity, ZGalleryActivity.class);
         gridActivity.putExtra(Constants.IntentPassingParams.IMAGES, imagesURLs);
-        gridActivity.putExtra(Constants.IntentPassingParams.COUNT, spanCount);
         gridActivity.putExtra(Constants.IntentPassingParams.TITLE, title);
         gridActivity.putExtra(Constants.IntentPassingParams.TOOLBAR_COLOR_ID, toolbarColor);
-        gridActivity.putExtra(Constants.IntentPassingParams.IMG_PLACEHOLDER, imgPlaceHolderResId);
         gridActivity.putExtra(Constants.IntentPassingParams.TOOLBAR_TITLE_COLOR, color);
+        gridActivity.putExtra(Constants.IntentPassingParams.SELECTED_IMG_POS, selectedImgPosition);
+        gridActivity.putExtra(Constants.IntentPassingParams.BG_COLOR, backgroundColor);
         mActivity.startActivity(gridActivity);
     }
 }
