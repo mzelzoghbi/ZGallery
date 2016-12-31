@@ -3,6 +3,11 @@ Android 3rd party library to make implementing galleries more easier
 
 I found myself writing the same Gallery Feature in many apps with the same code, so i made this library to make developers life more easier and prevent wasting their time.
 
+You can checkout the sample app, or view the app directly on GooglePlayStore
+
+<a href='https://play.google.com/store/apps/details?id=com.mzelzoghbi.zgallery'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="300px"/></a>
+
+
 It includes two activities : 
 * For displaying a list of images in `GridLayout` using `RecyclerView`.
 * For displaying images in a `ViewPager` with a nice scroll `HorizontalList` and nice zooming gestures **Thanks for [PhotoView Library](https://github.com/chrisbanes/PhotoView)** 
