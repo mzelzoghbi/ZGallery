@@ -1,4 +1,6 @@
 # ZGallery
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ZGallery-brightgreen.svg?style=plastic)]()
+
 Android 3rd party library to make implementing galleries more easier
 
 I found myself writing the same Gallery Feature in many apps with the same code, so i made this library to make developers life more easier and prevent wasting their time.
