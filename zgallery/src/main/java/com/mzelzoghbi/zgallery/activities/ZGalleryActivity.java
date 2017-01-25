@@ -4,6 +4,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
 import com.mzelzoghbi.zgallery.Constants;
@@ -83,5 +84,13 @@ public class ZGalleryActivity extends BaseActivity {
 
         hAdapter.setSelectedItem(currentPos);
         mViewPager.setCurrentItem(currentPos);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
