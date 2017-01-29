@@ -53,7 +53,7 @@ public final class ZGridActivity extends BaseActivity implements GridClickListen
                 .setToolbarTitleColor(ZColor.WHITE)
                 .setToolbarColorResId(toolbarColorResId)
                 .setSelectedImgPosition(pos)
-                .setTitle("Zak Gallery")
+                .setTitle(mToolbar.getTitle().toString())
                 .show();
     }
 }
