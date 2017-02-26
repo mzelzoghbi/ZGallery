@@ -64,7 +64,7 @@ Add this to your module `build.gradle` file:
 ```java
 dependencies {
   ...
-    compile 'com.github.mzelzoghbi:zgallery:0.1'
+    compile 'com.github.mzelzoghbi:zgallery:0.3'
 }
 ```
 
