@@ -6,7 +6,7 @@
     android:id="@+id/mainLayout"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/z_toolbar" />
 
     <com.mzelzoghbi.zgallery.CustomViewPager
         android:id="@+id/pager"

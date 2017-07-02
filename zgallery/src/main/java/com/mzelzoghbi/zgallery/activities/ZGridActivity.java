@@ -23,7 +23,7 @@ public final class ZGridActivity extends BaseActivity implements GridClickListen
 
     @Override
     protected int getResourceLayoutId() {
-        return R.layout.activity_grid;
+        return R.layout.z_activity_grid;
     }
 
     @Override

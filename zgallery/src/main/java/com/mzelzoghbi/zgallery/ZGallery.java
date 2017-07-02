@@ -40,7 +40,7 @@ public class ZGallery {
     }
 
     /**
-     * Set toolbar title
+     * Set z_toolbar title
      *
      * @param title
      * @return
@@ -51,7 +51,7 @@ public class ZGallery {
     }
 
     /**
-     * Setting toolbar Color ResourceId
+     * Setting z_toolbar Color ResourceId
      *
      * @param colorResId
      * @return
@@ -62,7 +62,7 @@ public class ZGallery {
     }
 
     /**
-     * Setting toolbar color
+     * Setting z_toolbar color
      *
      * @param color enum color may be black or white
      * @return
