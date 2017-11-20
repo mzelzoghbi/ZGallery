@@ -30,7 +30,8 @@ dependencies {
     compile ("com.android.support:support-v4:$rootProject.ext.supportLibVersion") {
         ext.optional = true
     }
-    compile("com.github.bumptech.glide:glide:$rootProject.ext.glideVersion") { ext.optional = true }
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
     compile("com.android.support:recyclerview-v7:$rootProject.ext.supportLibVersion") {
         ext.optional = true
     }
