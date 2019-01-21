@@ -71,7 +71,6 @@ dependencies {
 
 ```
 Add this to your module `build.gradle` file:
-```java
 dependencies {
   ...
 	 implementation 'com.github.you96m:ZGallery:0.4'
