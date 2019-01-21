@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ZGallery</string>
+
+    <string name="ad_mob_id">ca-app-pub-6284699558538127~1735568290</string>
+    <string name="ad_mob_banner">ca-app-pub-6284699558538127/4689034694</string>
+    <string name="ad_mob_interstitial">ca-app-pub-6284699558538127/6165767895</string>
+</resources>

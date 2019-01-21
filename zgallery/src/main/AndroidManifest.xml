@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mzelzoghbi.zgallery">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name=".activities.ZGridActivity" />
+        <activity android:name=".activities.ZGalleryActivity" />
+    </application>
+
+</manifest>
