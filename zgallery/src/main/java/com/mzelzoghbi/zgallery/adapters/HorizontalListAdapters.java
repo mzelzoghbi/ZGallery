@@ -1,9 +1,9 @@
 package com.mzelzoghbi.zgallery.adapters;
 
-import android.app.Activity;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +20,11 @@ import java.util.ArrayList;
  */
 public class HorizontalListAdapters extends RecyclerView.Adapter<HorizontalImageViewHolder> {
     ArrayList<String> images;
-    Activity activity;
+    AppCompatActivity activity;
     int selectedItem = -1;
     OnImgClick imgClick;
 
-    public HorizontalListAdapters(Activity activity, ArrayList<String> images, OnImgClick imgClick) {
+    public HorizontalListAdapters(AppCompatActivity activity, ArrayList<String> images, OnImgClick imgClick) {
         this.activity = activity;
         this.images = images;
         this.imgClick = imgClick;

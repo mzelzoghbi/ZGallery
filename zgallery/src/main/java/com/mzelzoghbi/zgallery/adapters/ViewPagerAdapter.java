@@ -1,12 +1,12 @@
 package com.mzelzoghbi.zgallery.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
-import android.support.v4.view.PagerAdapter;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +31,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  */
 public class ViewPagerAdapter extends PagerAdapter {
 
-    Activity activity;
+    AppCompatActivity activity;
     LayoutInflater mLayoutInflater;
     ArrayList<String> images;
     PhotoViewAttacher mPhotoViewAttacher;
@@ -39,7 +39,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     private Toolbar toolbar;
     private RecyclerView imagesHorizontalList;
 
-    public ViewPagerAdapter(Activity activity, ArrayList<String> images, Toolbar toolbar, RecyclerView imagesHorizontalList) {
+    public ViewPagerAdapter(AppCompatActivity activity, ArrayList<String> images, Toolbar toolbar, RecyclerView imagesHorizontalList) {
         this.activity = activity;
         mLayoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.images = images;

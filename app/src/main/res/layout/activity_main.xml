@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context="com.mzelzoghbi.sample.MainActivity">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -36,12 +36,12 @@
         android:onClick="galleryActivity"
         android:text="Gallery Activity" />
 
-    <com.google.android.gms.ads.AdView
+<!--    <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/ad_mob_banner" />
+        ads:adUnitId="@string/ad_mob_banner" />-->
 </RelativeLayout>

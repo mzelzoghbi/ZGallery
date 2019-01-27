@@ -1,7 +1,7 @@
 package com.mzelzoghbi.zgallery;
 
-import android.app.Activity;
 import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.mzelzoghbi.zgallery.activities.ZGalleryActivity;
 import com.mzelzoghbi.zgallery.entities.ZColor;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Created by mohamedzakaria on 8/11/16.
  */
 public class ZGallery {
-    private Activity mActivity;
+    private AppCompatActivity mActivity;
     private ArrayList<String> imagesURLs;
     private String title;
     private int spanCount = 2;
@@ -29,12 +29,12 @@ public class ZGallery {
      * @param activity   Refrence from current activity
      * @param imagesURLs Image URLs to be displayed
      */
-    public static ZGallery with(Activity activity, ArrayList<String> imagesURLs) {
+    public static ZGallery with(AppCompatActivity activity, ArrayList<String> imagesURLs) {
         return new ZGallery(activity, imagesURLs);
     }
 
 
-    private ZGallery(Activity activity, ArrayList<String> imagesURLs) {
+    private ZGallery(AppCompatActivity activity, ArrayList<String> imagesURLs) {
         this.imagesURLs = imagesURLs;
         this.mActivity = activity;
     }

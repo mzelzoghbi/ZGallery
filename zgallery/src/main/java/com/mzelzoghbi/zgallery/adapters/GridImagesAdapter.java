@@ -1,7 +1,7 @@
 package com.mzelzoghbi.zgallery.adapters;
 
-import android.app.Activity;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +19,11 @@ import java.util.ArrayList;
  */
 public class GridImagesAdapter extends RecyclerView.Adapter<ImageViewHolder> {
     private ArrayList<String> imageURLs;
-    private Activity mActivity;
+    private AppCompatActivity mActivity;
     private int imgPlaceHolderResId = -1;
     private GridClickListener clickListener;
 
-    public GridImagesAdapter(Activity activity, ArrayList<String> imageURLs, int imgPlaceHolderResId) {
+    public GridImagesAdapter(AppCompatActivity activity, ArrayList<String> imageURLs, int imgPlaceHolderResId) {
         this.imageURLs = imageURLs;
         this.mActivity = activity;
         this.imgPlaceHolderResId = imgPlaceHolderResId;

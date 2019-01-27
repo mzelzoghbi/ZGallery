@@ -67,7 +67,14 @@ dependencies {
     compile 'com.github.mzelzoghbi:zgallery:0.3'
 }
 ```
+# AndroidX
 
+```
+dependencies {
+  ...
+	 implementation 'com.github.you96m:ZGallery:0.4'
+}
+```
 # License
 
 > Copyright 2016 mzelzoghbi

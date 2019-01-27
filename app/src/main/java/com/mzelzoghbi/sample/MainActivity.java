@@ -1,14 +1,14 @@
 package com.mzelzoghbi.sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.InterstitialAd;
+//import com.google.android.gms.ads.MobileAds;
 import com.mzelzoghbi.zgallery.ZGallery;
 import com.mzelzoghbi.zgallery.ZGrid;
 import com.mzelzoghbi.zgallery.entities.ZColor;
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private InterstitialAd mInterstitialAd;
+    //private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // init sdk
+/*        // init sdk
         MobileAds.initialize(getApplicationContext(), getString(R.string.ad_mob_id));
         //  init banner
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -42,15 +42,15 @@ public class MainActivity extends AppCompatActivity {
         AdRequest interstitialAdRequest = new AdRequest.Builder()
                 .build();
 
-        mInterstitialAd.loadAd(interstitialAdRequest);
+        mInterstitialAd.loadAd(interstitialAdRequest);*/
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (mInterstitialAd.isLoaded()) {
+     /*   if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
-        }
+        }*/
     }
 
     public void gridActivity(View v) {
