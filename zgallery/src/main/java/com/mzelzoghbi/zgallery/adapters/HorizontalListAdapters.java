@@ -3,10 +3,12 @@ package com.mzelzoghbi.zgallery.adapters;
 import android.app.Activity;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.mzelzoghbi.zgallery.HorizontalImageViewHolder;
@@ -17,6 +19,8 @@ import java.util.ArrayList;
 
 /**
  * Created by mohamedzakaria on 8/12/16.
+ *
+ * Modified by mirjalal on 16/11/20.
  */
 public class HorizontalListAdapters extends RecyclerView.Adapter<HorizontalImageViewHolder> {
     ArrayList<String> images;
@@ -30,6 +34,7 @@ public class HorizontalListAdapters extends RecyclerView.Adapter<HorizontalImage
         this.imgClick = imgClick;
     }
 
+    @NonNull
     @Override
     public HorizontalImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new HorizontalImageViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.z_item_image_horizontal, null));

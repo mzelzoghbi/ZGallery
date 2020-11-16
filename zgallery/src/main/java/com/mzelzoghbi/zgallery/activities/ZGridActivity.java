@@ -1,8 +1,9 @@
 package com.mzelzoghbi.zgallery.activities;
 
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.mzelzoghbi.zgallery.Constants;
 import com.mzelzoghbi.zgallery.R;
@@ -13,13 +14,10 @@ import com.mzelzoghbi.zgallery.entities.ZColor;
 
 /**
  * Created by mohamedzakaria on 8/6/16.
+ *
+ * Modified by mirjalal on 16/11/20.
  */
 public final class ZGridActivity extends BaseActivity implements GridClickListener {
-    private RecyclerView mRecyclerView;
-    private GridImagesAdapter adapter;
-
-    private int imgPlaceHolderResId;
-    private int spanCount = 2;
 
     @Override
     protected int getResourceLayoutId() {
@@ -28,13 +26,13 @@ public final class ZGridActivity extends BaseActivity implements GridClickListen
 
     @Override
     protected void afterInflation() {
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
         // get extra values
-        imgPlaceHolderResId = getIntent().getIntExtra(Constants.IntentPassingParams.IMG_PLACEHOLDER, -1);
-        spanCount = getIntent().getIntExtra(Constants.IntentPassingParams.COUNT, 2);
+        int imgPlaceHolderResId = getIntent().getIntExtra(Constants.IntentPassingParams.IMG_PLACEHOLDER, -1);
+        int spanCount = getIntent().getIntExtra(Constants.IntentPassingParams.COUNT, 2);
 
-        adapter = new GridImagesAdapter(this, imageURLs, imgPlaceHolderResId);
+        GridImagesAdapter adapter = new GridImagesAdapter(this, imageURLs, imgPlaceHolderResId);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, spanCount));
         mRecyclerView.setAdapter(adapter);
     }

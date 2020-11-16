@@ -1,10 +1,12 @@
 package com.mzelzoghbi.zgallery.adapters;
 
 import android.app.Activity;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -16,12 +18,14 @@ import java.util.ArrayList;
 
 /**
  * Created by mohamedzakaria on 8/7/16.
+ *
+ * Modified by mirjalal on 16/11/20.
  */
 public class GridImagesAdapter extends RecyclerView.Adapter<ImageViewHolder> {
-    private ArrayList<String> imageURLs;
-    private Activity mActivity;
+    private final ArrayList<String> imageURLs;
+    private final Activity mActivity;
     private int imgPlaceHolderResId = -1;
-    private GridClickListener clickListener;
+    private final GridClickListener clickListener;
 
     public GridImagesAdapter(Activity activity, ArrayList<String> imageURLs, int imgPlaceHolderResId) {
         this.imageURLs = imageURLs;
@@ -30,6 +34,7 @@ public class GridImagesAdapter extends RecyclerView.Adapter<ImageViewHolder> {
         this.clickListener = (GridClickListener) activity;
     }
 
+    @NonNull
     @Override
     public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ImageViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.z_item_image, null));

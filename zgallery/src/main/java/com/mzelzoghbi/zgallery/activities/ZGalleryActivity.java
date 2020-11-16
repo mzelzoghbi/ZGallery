@@ -1,9 +1,10 @@
 package com.mzelzoghbi.zgallery.activities;
 
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
@@ -17,18 +18,16 @@ import com.mzelzoghbi.zgallery.entities.ZColor;
 
 /**
  * Created by mohamedzakaria on 8/11/16.
+ *
+ * Modified by mirjalal on 16/11/20.
  */
 public class ZGalleryActivity extends BaseActivity {
-    private RelativeLayout mainLayout;
 
     CustomViewPager mViewPager;
     ViewPagerAdapter adapter;
     RecyclerView imagesHorizontalList;
     LinearLayoutManager mLayoutManager;
     HorizontalListAdapters hAdapter;
-    private int currentPos;
-    private ZColor bgColor;
-
 
     @Override
     protected int getResourceLayoutId() {
@@ -38,13 +37,13 @@ public class ZGalleryActivity extends BaseActivity {
     @Override
     protected void afterInflation() {
         // init layouts
-        mainLayout = (RelativeLayout) findViewById(R.id.mainLayout);
+        RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.mainLayout);
         mViewPager = (CustomViewPager) findViewById(R.id.pager);
         imagesHorizontalList = (RecyclerView) findViewById(R.id.imagesHorizontalList);
 
         // get intent data
-        currentPos = getIntent().getIntExtra(Constants.IntentPassingParams.SELECTED_IMG_POS, 0);
-        bgColor = (ZColor) getIntent().getSerializableExtra(Constants.IntentPassingParams.BG_COLOR);
+        int currentPos = getIntent().getIntExtra(Constants.IntentPassingParams.SELECTED_IMG_POS, 0);
+        ZColor bgColor = (ZColor) getIntent().getSerializableExtra(Constants.IntentPassingParams.BG_COLOR);
 
         if (bgColor == ZColor.WHITE) {
             mainLayout.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white));

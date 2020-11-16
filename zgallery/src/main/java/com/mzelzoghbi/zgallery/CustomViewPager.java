@@ -1,12 +1,16 @@
 package com.mzelzoghbi.zgallery;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.ViewPager;
+
 /**
  * Created by mohamedzakaria on 8/12/16.
+ *
+ * Modified by mirjalal on 16/11/20.
  */
 public class CustomViewPager extends ViewPager {
     public CustomViewPager(Context context) {
@@ -17,6 +21,7 @@ public class CustomViewPager extends ViewPager {
         super(context, attrs);
     }
 
+    @NonNull
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         try {
