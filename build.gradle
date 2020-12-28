@@ -35,8 +35,6 @@ ext {
     compileSdkVersion = 29
 
     buildToolsVersion = "29.0.3"
-    supportLibVersion = "25.0.1"
-    glideVersion = "4.11.0"
+    glideVersion = '4.11.0'
     photoViewLibVersion = "2.3.0"
-    adsVersion = "19.5.0"
 }
