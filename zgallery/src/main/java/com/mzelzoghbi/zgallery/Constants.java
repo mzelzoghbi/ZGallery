@@ -2,10 +2,12 @@ package com.mzelzoghbi.zgallery;
 
 /**
  * Created by mohamedzakaria on 8/7/16.
+ *
+ * Modified by mirjalal on 16/11/20.
  */
 public final class Constants {
 
-    public class IntentPassingParams {
+    public static class IntentPassingParams {
         public static final String IMAGES = "images";
         public static final String COUNT = "count";
         public static final String TOOLBAR_COLOR_ID = "toolbarColorId";

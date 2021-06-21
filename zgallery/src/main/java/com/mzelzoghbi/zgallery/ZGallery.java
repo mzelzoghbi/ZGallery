@@ -10,14 +10,16 @@ import java.util.ArrayList;
 
 /**
  * Created by mohamedzakaria on 8/11/16.
+ *
+ * Modified by mirjalal on 16/11/20.
  */
 public class ZGallery {
     private Activity mActivity;
     private ArrayList<String> imagesURLs;
     private String title;
-    private int spanCount = 2;
+    private final int spanCount = 2;
     private int toolbarColor = -1;
-    private int imgPlaceHolderResId = -1;
+    private final int imgPlaceHolderResId = -1;
     private ZColor color;
     private int selectedImgPosition;
     private ZColor backgroundColor;
