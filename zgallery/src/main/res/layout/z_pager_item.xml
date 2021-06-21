@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <ProgressBar
+        android:id="@+id/loading_indicator"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_centerInParent="true" />

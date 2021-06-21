@@ -64,12 +64,13 @@ public class ViewPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        View itemView = mLayoutInflater.inflate(R.layout.z_pager_item, container, false);
+        final View itemView = mLayoutInflater.inflate(R.layout.z_pager_item, container, false);
 
         final ImageView imageView = (ImageView) itemView.findViewById(R.id.iv);
         Glide.with(activity).load(images.get(position)).listener(new RequestListener<Drawable>() {
             @Override
             public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                itemView.findViewById(R.id.loading_indicator).setVisibility(View.GONE);
                 return false;
             }
 
@@ -91,6 +92,8 @@ public class ViewPagerAdapter extends PagerAdapter {
                         }
                     }
                 });
+
+                itemView.findViewById(R.id.loading_indicator).setVisibility(View.GONE);
 
                 return false;
             }
