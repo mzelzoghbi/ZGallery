@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
-        versionCode 3
-        versionName "0.5"
+        versionCode 4
+        versionName "0.6"
     }
     buildTypes {
         release {
