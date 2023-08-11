@@ -28,4 +28,3 @@ dependencies {
     compile "com.google.firebase:firebase-ads:$rootProject.ext.adsVersion"
 
 }
-
