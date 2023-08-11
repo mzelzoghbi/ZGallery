@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // init sdk
-        MobileAds.initialize(getApplicationContext());
+        MobileAds.initialize(getApplicationContext(), getString(R.string.ad_mob_id));
         //  init banner
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
