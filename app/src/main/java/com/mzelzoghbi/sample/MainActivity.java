@@ -1,8 +1,8 @@
 package com.mzelzoghbi.sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
 import com.google.android.gms.ads.AdRequest;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // init sdk
-        MobileAds.initialize(getApplicationContext(), getString(R.string.ad_mob_id));
+        MobileAds.initialize(getApplicationContext());
         //  init banner
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
